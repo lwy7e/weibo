@@ -8,6 +8,7 @@
     {
         public function home()
         {
+
             return view('static_pages/home');
         }
 
