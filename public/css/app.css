@@ -10665,6 +10665,7 @@ footer {
   font-size: 13px;
   font-weight: bold;
   /* User gravatar */
+  /* Users edit */
 }
 
 footer a {
@@ -10706,5 +10707,15 @@ footer .gravatar {
   float: left;
   max-width: 50px;
   border-radius: 50%;
+}
+
+footer .gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+}
+
+footer .gravatar_edit .gravatar {
+  float: none;
+  max-width: 100px;
 }
 
