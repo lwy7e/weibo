@@ -26,11 +26,20 @@ class UsersController extends Controller
     {
         return view('users.create');
     }
-
+    /**
+     * @Author :陆文一<15382098644@163.com>
+     * @date：2019/7/9
+     * @time: 17:34
+     * @description: 显示该用户博客
+     */
     public function show(User $user)
     {
-        return view('users.show',compact('user'));
+        $statuses = $user->statuses()
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+        return view('users.show', compact('user', 'statuses'));
     }
+
 
     public function store(Request $request)
     {
@@ -147,5 +156,10 @@ class UsersController extends Controller
         session()->flash('success', '恭喜你，激活成功！');
         return redirect()->route('users.show', [$user]);
     }
+
+
+
+
+
 
 }

@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 use App\Notifications\ResetPassword;
 
 
-
 class User extends Authenticatable
 {
     use Notifiable;
